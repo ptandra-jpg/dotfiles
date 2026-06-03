@@ -116,7 +116,9 @@ elif [ -f "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 fi
 
 # CoreWeave Netskope SSL fix — combined CA bundle for Node.js, Go and Python tools (re-run setup.sh to refresh)
-export NODE_EXTRA_CA_CERTS="/Users/ptandra/.certs/ca-bundle.pem"
-export SSL_CERT_FILE="/Users/ptandra/.certs/ca-bundle.pem"
-export REQUESTS_CA_BUNDLE="/Users/ptandra/.certs/ca-bundle.pem"
+if [[ "$(uname)" == "Darwin" ]]; then
+  export NODE_EXTRA_CA_CERTS="/Users/ptandra/.certs/ca-bundle.pem"
+  export SSL_CERT_FILE="/Users/ptandra/.certs/ca-bundle.pem"
+  export REQUESTS_CA_BUNDLE="/Users/ptandra/.certs/ca-bundle.pem"
+fi
 
