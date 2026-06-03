@@ -10,7 +10,7 @@ fi
 sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes
 
 # Symlink dotfiles
-DOTFILES="$HOME/dotfiles"
+DOTFILES="$HOME/.config/coderv2/dotfiles"
 ln -sf "$DOTFILES/.zshrc" "$HOME/.zshrc"
 ln -sf "$DOTFILES/.zprofile" "$HOME/.zprofile"
 ln -sf "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
