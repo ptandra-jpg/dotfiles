@@ -1,0 +1,5 @@
+[user]
+	name = Pradyun Tandra
+	email = ptandra@coreweave.com
+[url "git@github.com:"]
+	insteadOf = https://github.com/
