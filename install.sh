@@ -18,6 +18,3 @@ mkdir -p "$HOME/.config"
 ln -sf "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"
 mkdir -p "$HOME/.ssh"
 ln -sf "$DOTFILES/config" "$HOME/.ssh/config"
-
-# Set zsh as default shell
-chsh -s $(which zsh)
