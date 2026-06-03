@@ -107,7 +107,13 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
 export PATH="$PATH:/Users/ptandra/.local/bin"
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Cross-platform zsh-syntax-highlighting
+if [ -f "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+  source "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+elif [ -f "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+  source "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
 
 # CoreWeave Netskope SSL fix — combined CA bundle for Node.js, Go and Python tools (re-run setup.sh to refresh)
 export NODE_EXTRA_CA_CERTS="/Users/ptandra/.certs/ca-bundle.pem"

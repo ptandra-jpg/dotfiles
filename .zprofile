@@ -1,1 +1,4 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Only run on macOS
+if [[ "$(uname)" == "Darwin" ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
