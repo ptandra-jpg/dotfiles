@@ -29,3 +29,6 @@ mkdir -p "$HOME/.config"
 ln -sf "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"
 mkdir -p "$HOME/.ssh"
 ln -sf "$DOTFILES/config" "$HOME/.ssh/config"
+
+# init dev environment (does not persist in coder env)
+cw dev init
