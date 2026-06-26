@@ -32,3 +32,6 @@ ln -sf "$DOTFILES/config" "$HOME/.ssh/config"
 
 # init dev environment (does not persist in coder env)
 cw dev init
+
+# install packages that don't persist in coder env
+sudo apt update && sudo apt install tmux
